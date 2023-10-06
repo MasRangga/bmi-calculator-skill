@@ -91,3 +91,9 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+// Menambahkan event listener ke form
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Mencegah form dari pengiriman default
+  calculate(); // Panggil fungsi calculate() ketika form di-submit
+});
