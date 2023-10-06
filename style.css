@@ -1,0 +1,348 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("./img/Bg.png") center/cover no-repeat;
+}
+
+.box {
+  width: 800px;
+  background: #fafafa67;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  color: rgb(0, 0, 0, 0.7);
+  font-weight: bold;
+  font-size: 36px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  line-height: 2.5;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content {
+  padding: 0 30px;
+}
+
+.input {
+  background: rgba(255, 255, 255, 0.677);
+  box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.input label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.input input {
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  border-bottom: 2px solid rgb(99 102 241);
+  width: 50%;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Nunito", sans-serif;
+  transition: border-bottom 0.3s ease;
+  padding: 10px; /* Menambahkan padding untuk kenyamanan */
+  margin: 10px; /* Menambahkan margin untuk memberikan ruang di sekitar elemen */
+}
+
+.input input:hover {
+  border-bottom: 2px solid #354f9f;
+}
+
+.input input:active {
+  border-bottom: 2px solid #354f9f;
+  padding-bottom: 9px; /* Memberikan efek sedikit menyusut saat diklik */
+  margin-top: 1px; /* Memberikan efek naik saat diklik */
+}
+
+.inputW {
+  background: rgba(255, 255, 255, 0.677);
+  box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease; /* Menambahkan transisi pada box-shadow */
+}
+
+.inputW:hover {
+  box-shadow: 0px 0px 95px -10px rgba(0, 0, 0, 0.25); /* Mengubah box-shadow saat dihover */
+}
+
+.inputW label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.inputW input {
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  border-bottom: 4px solid rgb(99 102 241);
+  width: 50%;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Nunito", sans-serif;
+  transition: border-bottom 0.3s ease; /* Menambahkan transisi pada border-bottom */
+}
+
+.inputW input:hover {
+  border-bottom: 4px solid #354f9f; /* Mengubah warna border saat dihover */
+}
+
+.inputH {
+  background: rgba(255, 255, 255, 0.677);
+  box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  transition: box-shadow 0.3s ease; /* Menambahkan transisi pada box-shadow */
+}
+
+.inputH:hover {
+  box-shadow: 0px 0px 95px -10px rgba(0, 0, 0, 0.25); /* Mengubah box-shadow saat dihover */
+}
+
+.inputH label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.inputH input {
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  border-bottom: 4px solid rgb(99 102 241);
+  width: 50%;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Nunito", sans-serif;
+  transition: border-bottom 0.3s ease; /* Menambahkan transisi pada border-bottom */
+}
+
+.inputH input:hover {
+  border-bottom: 4px solid #354f9f; /* Mengubah warna border saat dihover */
+}
+
+button.calculate {
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  background: rgb(99 102 241);
+  font-size: 16px;
+  border-radius: 7px;
+  padding: 12px 0;
+  width: 100%;
+  outline: none;
+  border: none;
+  transition: all 0.5s;
+}
+
+button.calculate:hover {
+  background: #354f9f; /* Mengubah warna latar belakang saat dihover */
+  transform: scale(1.05); /* Memberikan efek sedikit membesar saat dihover */
+}
+
+.result {
+  padding: 10px 20px;
+}
+.result p {
+  font-weight: 600;
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 15px;
+}
+.result #result {
+  font-size: 36px;
+  font-weight: 900;
+  color: rgb(99 102 241);
+  background-color: rgba(255, 255, 255, 0.677);
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+#comment {
+  color: rgb(99 102 241);
+  font-weight: 800;
+}
+
+.comment {
+  display: none;
+  border: dashed 1px;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.footer-text {
+  text-decoration: none;
+  color: rgba(40, 40, 40, 0.8);
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  transition: all 0.5;
+}
+
+.footer-text:hover {
+  color: rgba(40, 40, 40, 1);
+}
+
+.gender {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background: rgba(255, 255, 255, 0.677);
+  box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+/* Style untuk Radio */
+.gender .container {
+  display: block;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 7px;
+  cursor: pointer;
+  font-size: 30px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Menyembunyikan tombol radio default browser */
+.gender .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Membuat tombol radio khusus */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(248, 248, 248);
+  border-radius: 50%;
+}
+
+/* Saat mengarahkan mouse, tambahkan warna latar belakang abu-abu */
+.gender .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* Saat tombol radio dicentang, tambahkan latar belakang biru */
+.gender .container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Buat indikator (titik/lingkaran - tersembunyi jika tidak dicentang) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Tampilkan indikator (titik/lingkaran) bila dicentang */
+.gender .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.gender .container .checkmark:after {
+  top: 50%; /* Pusatkan vertikal indikator */
+  transform: translate(0, -50%); /* Pusatkan vertikal indikator */
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+/* END Style for Radio */
+
+.containerHW {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 300px;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: #393c76 -1px 2px 2px 1px;
+}
+
+#modalText {
+  padding-top: 8px;
+  padding-right: 5px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(24, 23, 23);
+}
